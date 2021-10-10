@@ -5,4 +5,4 @@ There is a feed in this app. Follow someone by searching their username and refr
 
 <b>Message Anyone With Chat App</b>
 
-You can message people who use the app and Encrypted SMS (Coming Soon)
+You can message people who use the app and Encrypted SMS
