@@ -1,0 +1,435 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id=")3oy7HS!|-RqT5!lzeI1" x="-690" y="-110">
+    <mutation component_type="Form" is_generic="false" instance_name="Import5GDE2H" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Import5GDE2H</field>
+    <statement name="DO">
+      <block type="component_set_get" id="1neY#4Epnfh+=)OW~=b3">
+        <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="Web_Viewer1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+        <field name="PROP">HomeUrl</field>
+        <value name="VALUE">
+          <block type="text_join" id="k{DAbQ{op,6`#hWjII_-">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="i-sW.V-u{#ysrdDJO2t5">
+                <field name="TEXT">https://api.qrserver.com/v1/create-qr-code/?data=</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text_join" id=":==DrPdxORL(8HMx:w]2">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <block type="component_method" id="Ah_zb2Z3uHYJ.y2uv0;q">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                    <value name="ARG0">
+                      <block type="text" id=".1`)q-ydCZ%X2bGp;Hk{">
+                        <field name="TEXT">Username</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="%3F3ialLmk=`tX6^CldJ">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="`p_PcoF3(HkT=~4|avOJ">
+                    <field name="TEXT">,</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="component_method" id="pI9WB]19#k+[$rcgAb^V">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="?I1z44Cf|+NR9/5aiI97">
+                        <field name="TEXT">UserID</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="{-*ME8h~C2[L6.%laN?p">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="xuNTF,}/5Ux@H)FZ%x:G">
+            <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="Web_Viewer2"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer2</field>
+            <field name="PROP">HomeUrl</field>
+            <value name="VALUE">
+              <block type="text_join" id="N?M@A@gcJ}yR7IS8!_Of">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="EYLD7^rSGLhc8w|i9$g%">
+                    <field name="TEXT">https://api.qrserver.com/v1/create-qr-code/?data=lukabook://</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="component_method" id="$LdzulHx9HGyOqd`?X_,">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="QT`B$xqP$,nX](*t):*5">
+                        <field name="TEXT">Username</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="hleBe.B#Sa:83lXB|x%x">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="z.CV@uD3-A.P*c86ruha">
+                <mutation component_type="MakeroidViewPager" method_name="AddComponentToView" is_generic="false" instance_name="View_Pager1"></mutation>
+                <field name="COMPONENT_SELECTOR">View_Pager1</field>
+                <value name="ARG0">
+                  <block type="component_component_block" id="c?eH7[tu9oC1uq@RPibo">
+                    <mutation component_type="HorizontalArrangement" instance_name="Horizontal_Arrangement2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Horizontal_Arrangement2</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="/LbM-PSq/PC`svp9#ATY">
+                    <field name="TEXT">Lukabook Code</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="J4k0_|`*_2::*_tnRWd!">
+                    <mutation component_type="MakeroidViewPager" method_name="AddComponentToView" is_generic="false" instance_name="View_Pager1"></mutation>
+                    <field name="COMPONENT_SELECTOR">View_Pager1</field>
+                    <value name="ARG0">
+                      <block type="component_component_block" id="5nHfMQZC|{Buk1Bii;bI">
+                        <mutation component_type="HorizontalArrangement" instance_name="Horizontal_Arrangement1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Horizontal_Arrangement1</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="@q%ciuI?hO.k=%g%X@([">
+                        <field name="TEXT">Nametag</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="D@HgYc$-W3u-et}1rR8U">
+                        <mutation component_type="WebViewer" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Web_Viewer1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_false" id="!prHU=hmr,Rz!85g_ac[">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="rWJ1R301NW;0ly,qXUj`">
+                            <mutation component_type="WebViewer" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Web_Viewer2"></mutation>
+                            <field name="COMPONENT_SELECTOR">Web_Viewer2</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_false" id="Ggjs[+:/o`X;5UrZKP2{">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="0wtCzCQq!P/pjrVH`F5%" x="710" y="10">
+    <mutation component_type="Button" is_generic="false" instance_name="Button2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button2</field>
+    <statement name="DO">
+      <block type="component_method" id="gdv{{8(fm,4/=9m~myDY">
+        <mutation component_type="BarcodeScanner" method_name="DoScan" is_generic="false" instance_name="Barcode_Scanner1"></mutation>
+        <field name="COMPONENT_SELECTOR">Barcode_Scanner1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="afAFrs/t-)kNs5gGNsA*" x="1150" y="70">
+    <mutation component_type="Button" is_generic="false" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="controls_closeScreen" id="a!v({jp{VH}qz3DPN.u?"></block>
+    </statement>
+  </block>
+  <block type="component_event" id="r`49d.Me1I4R1,?Eu]ut" x="230" y="170">
+    <mutation component_type="WebViewer" is_generic="false" instance_name="Web_Viewer1" event_name="ProgressChanged"></mutation>
+    <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+    <statement name="DO">
+      <block type="controls_if" id="eFisg/#Zb;MNrc{;INXD">
+        <value name="IF0">
+          <block type="logic_compare" id="6/;l`o^P2mV]Z%{JZ`Bb">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="jrR1G:{|9[a;vnzNv,yK">
+                <mutation>
+                  <eventparam name="progress"></eventparam>
+                </mutation>
+                <field name="VAR">progress</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="D;/dG^*KSO2-,`wnu`6[">
+                <field name="TEXT">100</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="WoeUQ/{u?g4C8fl}cLb,">
+            <mutation component_type="WebViewer" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Web_Viewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer1</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_false" id="dhMgGVpumr00Er_q!$S=">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="A]kPgmq,_+=Ogixx!Oug">
+                <mutation component_type="MakeroidCircularProgress" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Circular_Progress1"></mutation>
+                <field name="COMPONENT_SELECTOR">Circular_Progress1</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_false" id="aN9aP}Z$ofDIs{:XCVu~">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="4[if/o7@%.e4)imzaL-:" x="830" y="210">
+    <mutation component_type="BarcodeScanner" is_generic="false" instance_name="Barcode_Scanner1" event_name="AfterScan"></mutation>
+    <field name="COMPONENT_SELECTOR">Barcode_Scanner1</field>
+    <statement name="DO">
+      <block type="controls_if" id=".$~Q2(^#~Raue`6z1*c?">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="text_contains" id="nFz)gDpuaVCyd,#[T+UD">
+            <value name="TEXT">
+              <block type="lexical_variable_get" id=";9BJEGq5S%#XZ4CEJM;?">
+                <mutation>
+                  <eventparam name="result"></eventparam>
+                </mutation>
+                <field name="VAR">result</field>
+              </block>
+            </value>
+            <value name="PIECE">
+              <block type="text" id="@|HbCC-Vl.hjBeis~GSY">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="*|XV:N0!/J9/Z7=p$~aN">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text_join" id="Q5#=9nd`ZMrOOvvIyB~0">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="^(4(aD)MQQ.T|I.r|Fb+">
+                    <field name="TEXT">Opening the profile of </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="lists_select_item" id="z{D[zs@K6gL=V=,Xg2h!">
+                    <value name="LIST">
+                      <block type="text_split" id="[]@DOIj?m`P0^n-xFw]^">
+                        <mutation mode="SPLIT"></mutation>
+                        <field name="OP">SPLIT</field>
+                        <value name="TEXT">
+                          <block type="lexical_variable_get" id="yn@|(biUhdQOFG!9~#SC">
+                            <mutation>
+                              <eventparam name="result"></eventparam>
+                            </mutation>
+                            <field name="VAR">result</field>
+                          </block>
+                        </value>
+                        <value name="AT">
+                          <block type="text" id="p2$#`?zPKMR=|@OHXN1!">
+                            <field name="TEXT">,</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <block type="text" id="Q=QIZ}aYDt[;o[UA:sAB">
+                        <field name="TEXT">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_openAnotherScreenWithStartValue" id="p`hSwG6J:5dOdUG9*h(m">
+                <value name="SCREENNAME">
+                  <block type="helpers_screen_names" id="*Zu63PAOE?]/AP@94a@O">
+                    <field name="SCREEN">Profile</field>
+                  </block>
+                </value>
+                <value name="STARTVALUE">
+                  <block type="lists_create_with" id="/RNld)M@FZVd3x6#L7sZ">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="lists_select_item" id="tM/e`7B=AZncHfH+^wsj">
+                        <value name="LIST">
+                          <block type="text_split" id="2)ve-(Q0lTtfC,`P[,WT">
+                            <mutation mode="SPLIT"></mutation>
+                            <field name="OP">SPLIT</field>
+                            <value name="TEXT">
+                              <block type="lexical_variable_get" id="-kV9t%V|IFxwr@.4UQnM">
+                                <mutation>
+                                  <eventparam name="result"></eventparam>
+                                </mutation>
+                                <field name="VAR">result</field>
+                              </block>
+                            </value>
+                            <value name="AT">
+                              <block type="text" id="B7oL#VO9jZZTTyN9$)hL">
+                                <field name="TEXT">,</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NUM">
+                          <block type="text" id="FSd,qnW|C`}D#DjV(}bo">
+                            <field name="TEXT">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="lists_select_item" id="#z;Vm(=G^N+;~/DMkQRI">
+                        <value name="LIST">
+                          <block type="text_split" id="(1z00.sHSrV?gx7-PP*P">
+                            <mutation mode="SPLIT"></mutation>
+                            <field name="OP">SPLIT</field>
+                            <value name="TEXT">
+                              <block type="lexical_variable_get" id="m=|J#^Kgh9f-I:~hHqNo">
+                                <mutation>
+                                  <eventparam name="result"></eventparam>
+                                </mutation>
+                                <field name="VAR">result</field>
+                              </block>
+                            </value>
+                            <value name="AT">
+                              <block type="text" id="hG=Vni`-(E(QGc[5,bB_">
+                                <field name="TEXT">,</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NUM">
+                          <block type="text" id="kx4_.ir0^|FmTjbA0Zs=">
+                            <field name="TEXT">2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="=_Ze@q52Si3Bs~|]$0{T">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="EJnS{XkIjifov5QO*^bP">
+                <field name="TEXT">Scan the Direct QR Code, not the Nametag.</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="Oebwq9ZysZr|Z;W?kLs5">
+                <field name="TEXT">Not a valid QR Code.</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id="zoPlXY;dt?Q:=0KbqbU?">
+                <field name="TEXT">OK</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Nn6Pd$D^T#G@uU!2QTAc" x="170" y="430">
+    <mutation component_type="WebViewer" is_generic="false" instance_name="Web_Viewer2" event_name="ProgressChanged"></mutation>
+    <field name="COMPONENT_SELECTOR">Web_Viewer2</field>
+    <statement name="DO">
+      <block type="controls_if" id=";a4FXD31?f#YubWF_PgE">
+        <value name="IF0">
+          <block type="logic_compare" id="~Vieysl.HnD+KA+@@}x:">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="NY:hRsW=5_#{cK}]-:Hu">
+                <mutation>
+                  <eventparam name="progress"></eventparam>
+                </mutation>
+                <field name="VAR">progress</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="zUr,0_4[RE;0`epg01[e">
+                <field name="TEXT">100</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="IOVj0aOl~tJ!_ykBVH[~">
+            <mutation component_type="WebViewer" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Web_Viewer2"></mutation>
+            <field name="COMPONENT_SELECTOR">Web_Viewer2</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_false" id="r[MW;xG9aRY(!e{;|@(:">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="pR6~Ho@i4pa(CvX3z05}">
+                <mutation component_type="MakeroidCircularProgress" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Circular_Progress2"></mutation>
+                <field name="COMPONENT_SELECTOR">Circular_Progress2</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_false" id="l+pf]VQx_ZtwJpDVxNpE">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="242" language-version="34"></yacodeblocks>
+</xml>

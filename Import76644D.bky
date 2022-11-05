@@ -1,0 +1,785 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="w3*iQaG6Tyk.@,24~Qv/" x="-10" y="-350">
+    <mutation component_type="Form" is_generic="false" instance_name="Import76644D" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Import76644D</field>
+    <statement name="DO">
+      <block type="component_set_get" id="QCpE?enKr:wQqAPu(]zf">
+        <mutation component_type="FirebaseDB" set_or_get="set" property_name="ProjectBucket" is_generic="false" instance_name="Firebase_Database1"></mutation>
+        <field name="COMPONENT_SELECTOR">Firebase_Database1</field>
+        <field name="PROP">ProjectBucket</field>
+        <value name="VALUE">
+          <block type="text_join" id=":Hi*=hiuT|n]tYL9lub)">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="8zujzTannZ_wHY*F6|cv">
+                <field name="TEXT">Stories</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_method" id="n7zvSZG#NHExqtnkkXzx">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                <value name="ARG0">
+                  <block type="text" id="J?BrB+Msc12BG(8#TeV{">
+                    <field name="TEXT">UserID</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="FG9BeR[(9vg?4Fha6I1B">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="]B(H!5(lf9K[=IxfnKtH">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="component_method" id="q[tWKE=4(R/j]-Z$J(LI">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                <value name="ARG0">
+                  <block type="text" id="Qws9OxQzX!G!]O4go5Xn">
+                    <field name="TEXT">CameraPermission</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="logic_false" id="%QxWY{o{y6E~4-1nW6Pn">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" id="8k1K*dL0to*qx212f=jk">
+                <mutation component_type="ProCamera" set_or_get="set" property_name="Output" is_generic="false" instance_name="ProCamera1"></mutation>
+                <field name="COMPONENT_SELECTOR">ProCamera1</field>
+                <field name="PROP">Output</field>
+                <value name="VALUE">
+                  <block type="text_join" id="zaVSiYeA5fdpzyO4hm9w">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="component_method" id=".j=?vL)tJQ.{nltA+N;K">
+                        <mutation component_type="TaifunFile" method_name="ApplicationSpecificDirectory" is_generic="false" instance_name="TaifunFile1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TaifunFile1</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="6k9xT[ZL3VdNL~jcxN{4">
+                        <field name="TEXT">/photo.png</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="v:yKMG%s}qGV5AAL$loI">
+                    <mutation component_type="ProCamera" method_name="Initialize" is_generic="false" instance_name="ProCamera1"></mutation>
+                    <field name="COMPONENT_SELECTOR">ProCamera1</field>
+                    <value name="ARG0">
+                      <block type="component_component_block" id="W[eWShkjAn3F6E0`34(o">
+                        <mutation component_type="VerticalArrangement" instance_name="Vertical_Arrangement1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="component_set_get" id="N5^aQ)R5Nki*fa3dpG:v">
+                        <mutation component_type="ProCamera" set_or_get="get" property_name="CameraTypeFront" is_generic="false" instance_name="ProCamera1"></mutation>
+                        <field name="COMPONENT_SELECTOR">ProCamera1</field>
+                        <field name="PROP">CameraTypeFront</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="component_method" id="?a{zY`nB~u/{}$o7/GpK">
+                <mutation component_type="Form" method_name="AskForPermission" is_generic="false" instance_name="Import76644D"></mutation>
+                <field name="COMPONENT_SELECTOR">Import76644D</field>
+                <value name="ARG0">
+                  <block type="helpers_dropdown" id="kSu%#tP)A|uJ*1}w81OP">
+                    <mutation key="Permission"></mutation>
+                    <field name="OPTION">Camera</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="component_method" id="Y`BRlAK22L(bdp903BtR">
+                <mutation component_type="FirebaseDB" method_name="GetTagList" is_generic="false" instance_name="Firebase_Database2"></mutation>
+                <field name="COMPONENT_SELECTOR">Firebase_Database2</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="1F%j)m3FGUm}H$P,(B#g" x="830" y="-50">
+    <mutation component_type="FirebaseDB" is_generic="false" instance_name="Firebase_Database2" event_name="TagList"></mutation>
+    <field name="COMPONENT_SELECTOR">Firebase_Database2</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="T;i2u^=o!axhQz2%yTm.">
+        <field name="VAR">global FirstStory</field>
+        <value name="VALUE">
+          <block type="logic_negate" id="5~@CYEfX.rpPI5#7{hLx">
+            <value name="BOOL">
+              <block type="text_contains" id="i%O=~wPxU9m=Re-!mxZa">
+                <value name="TEXT">
+                  <block type="lists_to_csv_row" id="*weHc!Q(br}p^z4O+7xy">
+                    <value name="LIST">
+                      <block type="lexical_variable_get" id="I=~x-`-X@tOE0FAqjB*d">
+                        <mutation>
+                          <eventparam name="value"></eventparam>
+                        </mutation>
+                        <field name="VAR">value</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="PIECE">
+                  <block type="component_method" id="QZmfi842pyGhzw@!;hNj">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="{Z;!V(kefD^b3o:[wo2X">
+                        <field name="TEXT">UserID</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="0/aWE4]dlX=MD5@-cRi`">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="IxsXuQ=6,I7xLU*@R1^R" x="-350" y="30">
+    <mutation component_type="Form" is_generic="false" instance_name="Import76644D" event_name="PermissionGranted"></mutation>
+    <field name="COMPONENT_SELECTOR">Import76644D</field>
+    <statement name="DO">
+      <block type="component_method" id="0PGT{Ldr_I:H%v88y%Kj">
+        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+        <value name="ARG0">
+          <block type="text" id="ow;9k/nT*}g)$Yu3RiR(">
+            <field name="TEXT">CameraPermission</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="logic_false" id="F)=2be0WPy;?PNEY}66f">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="4.3/SPk=F2.5S89Kvk@9">
+            <mutation component_type="ProCamera" set_or_get="set" property_name="Output" is_generic="false" instance_name="ProCamera1"></mutation>
+            <field name="COMPONENT_SELECTOR">ProCamera1</field>
+            <field name="PROP">Output</field>
+            <value name="VALUE">
+              <block type="text_join" id=")_VWa^pB%^WI5B*|xdGg">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="component_method" id="56K)u-xEp($Km?#P~#m/">
+                    <mutation component_type="TaifunFile" method_name="ApplicationSpecificDirectory" is_generic="false" instance_name="TaifunFile1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TaifunFile1</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="$,rak0y#X;g0BIZhGLu1">
+                    <field name="TEXT">/photo.png</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="q1$[l,pYtzgl-#:T?W3+">
+                <mutation component_type="ProCamera" method_name="Initialize" is_generic="false" instance_name="ProCamera1"></mutation>
+                <field name="COMPONENT_SELECTOR">ProCamera1</field>
+                <value name="ARG0">
+                  <block type="component_component_block" id="$uSUwB6Mgbg}$AqL~PTX">
+                    <mutation component_type="VerticalArrangement" instance_name="Vertical_Arrangement1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="component_set_get" id=")j?q7S+,QnKNb/yDz_vs">
+                    <mutation component_type="ProCamera" set_or_get="get" property_name="CameraTypeFront" is_generic="false" instance_name="ProCamera1"></mutation>
+                    <field name="COMPONENT_SELECTOR">ProCamera1</field>
+                    <field name="PROP">CameraTypeFront</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="Lq3ZF!b1a#KX=)_;P0(_" x="1210" y="-30">
+    <field name="NAME">FirstStory</field>
+    <value name="VALUE">
+      <block type="logic_false" id="urXX;m)DxM;i-dX$S/|`">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="xDC~f7k;{0BV1qx{2[80" x="1770" y="90">
+    <mutation component_type="MakeroidCloudinary" is_generic="false" instance_name="Cloudinary1" event_name="MediaUploaded"></mutation>
+    <field name="COMPONENT_SELECTOR">Cloudinary1</field>
+    <statement name="DO">
+      <block type="component_method" id="lf]f;mT/O`1b|@sPvWN_">
+        <mutation component_type="Notifier" method_name="DismissProgressDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <next>
+          <block type="controls_if" id="ZGnZb*.s2#OG0~{0a@!/">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="lexical_variable_get" id="$pGweRCTk={c=Z:=PBZH">
+                <field name="VAR">global FirstStory</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_method" id="!XVXzH-80J!ubcTStd.:">
+                <mutation component_type="FirebaseDB" method_name="StoreValue" is_generic="false" instance_name="Firebase_Database2"></mutation>
+                <field name="COMPONENT_SELECTOR">Firebase_Database2</field>
+                <value name="ARG0">
+                  <block type="component_method" id="XnU;s04$_A^Cb`@K8g|3">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="Wj;BFXuu,H]z26}UcXXS">
+                        <field name="TEXT">UserID</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="U.j5wb|E5O~lDwfdy.n!">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lists_create_with" id="`%r{ji}E.C@ekqKLfUz$">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="lists_create_with" id="^2regY^+@O=~3Sida-+T">
+                        <mutation items="5"></mutation>
+                        <value name="ADD0">
+                          <block type="lexical_variable_get" id="r@]3s-QICt)f(Eyz:+=E">
+                            <mutation>
+                              <eventparam name="url"></eventparam>
+                            </mutation>
+                            <field name="VAR">url</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="component_method" id="YR|+}n+OsFEns^-FnmaC">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="GjaBRWu7u78xeEcrtn[E">
+                                <field name="TEXT">Username</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text" id="VC6Z]?%eH9x|ElkGe83$">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="component_method" id="vnUa]s3pOW7[5?xL/}17">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="AbZW%K7Dr3mnfm7[Lr|t">
+                                <field name="TEXT">YourPFP</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text" id="=h2gs.fDX-,2e=2q3ec5">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="component_method" id="@Vg*T#SN[Wm:(%7pU5f!">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="mz5Mw=/;:%!,E1tVPo_k">
+                                <field name="TEXT">UserID</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text" id="B,m;-E5^PDu%l@^w{swC">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="component_method" id="w{Bg@lnTmV:qpQ.`VBXe">
+                            <mutation component_type="Clock" method_name="SystemTime" is_generic="false" instance_name="Clock1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Clock1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="component_method" id="?J3`Xw-wX*5(AEq(BW`|">
+                <mutation component_type="FirebaseDB" method_name="AppendValue" is_generic="false" instance_name="Firebase_Database2"></mutation>
+                <field name="COMPONENT_SELECTOR">Firebase_Database2</field>
+                <value name="ARG0">
+                  <block type="component_method" id="n.=E)0.[N[6GuS=KYXEe">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="yuUHi?%IPB5*T8Lsdrz`">
+                        <field name="TEXT">UserID</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="4}U;=@~h${:%$*Jk[fy)">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lists_create_with" id=":HEg*l$Jf8A5g2nzB{)3">
+                    <mutation items="5"></mutation>
+                    <value name="ADD0">
+                      <block type="lexical_variable_get" id="mQE}MaxLP8q,1lTQWux2">
+                        <mutation>
+                          <eventparam name="url"></eventparam>
+                        </mutation>
+                        <field name="VAR">url</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="component_method" id="pH~v-:-[4F*Kw%B+*S?/">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="uPb9Z_HojFmoL=?wlanZ">
+                            <field name="TEXT">Username</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="/N)RUj{mVuP#Qjg6ZYt0">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="component_method" id="1:1VJ?^WO@VYz$|o:qD|">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="S|3nYp.w.^KZJyrl;-_/">
+                            <field name="TEXT">YourPFP</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="1L8xDrP5;V32_o#Xl9k}">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="component_method" id="%!7$_EIj3QSm=.O$XH5+">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="]TuNmL5{+f5[vTr`TxiD">
+                            <field name="TEXT">UserID</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="gEamy:6V#U]]Q.DjLsr:">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD4">
+                      <block type="component_method" id="_;Upw/M6%UQIHxs]j4B2">
+                        <mutation component_type="Clock" method_name="SystemTime" is_generic="false" instance_name="Clock1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Clock1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="component_method" id="9[MW)6:h,!qF^hf`gl%m">
+                <mutation component_type="FirebaseDB" method_name="StoreValue" is_generic="false" instance_name="Firebase_Database1"></mutation>
+                <field name="COMPONENT_SELECTOR">Firebase_Database1</field>
+                <value name="ARG0">
+                  <block type="text_join" id=".KD:]Zy=avlRH:ohz_7J">
+                    <mutation items="3"></mutation>
+                    <value name="ADD0">
+                      <block type="component_method" id="Nk$)UUx+g{H9)0;Pm1GD">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="PMtWYPQJ-%6[sz~$RX,Z">
+                            <field name="TEXT">UserID</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="$qqwy1soA)2M|4M8N%a[">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="d(-%dJZo9715a%g6KC*i">
+                        <field name="TEXT">_</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="component_method" id="{(7u,ug,Ox,06w,.n+0}">
+                        <mutation component_type="Clock" method_name="SystemTime" is_generic="false" instance_name="Clock1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Clock1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lists_create_with" id="ycBVHpxo!1(0#1-[l4mf">
+                    <mutation items="4"></mutation>
+                    <value name="ADD0">
+                      <block type="lexical_variable_get" id="+V%R1(YH7.X]?m}9%kPs">
+                        <mutation>
+                          <eventparam name="url"></eventparam>
+                        </mutation>
+                        <field name="VAR">url</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="component_method" id="7y8nn4:a55:3`7;}|7!v">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="CFW.rZ+}C3T/{:zzBmUn">
+                            <field name="TEXT">Username</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="/b0u!i536H(%:yg[EP8A">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="component_method" id="DEIWY([+L.1O3hm,Buj|">
+                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="5kSCkb8I$=x9gma?jtGO">
+                            <field name="TEXT">YourPFP</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="C)1B29GyC$B~1fY13GV7">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="component_method" id=",MbiYzaSJQt5AOXWu8(O">
+                        <mutation component_type="Clock" method_name="SystemTime" is_generic="false" instance_name="Clock1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Clock1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_closeScreen" id="E(MFyo)F{tn$(n9AoT+u"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="8JYN44M*p(%rs|$9;FlR" x="453" y="301">
+    <mutation component_type="Button" is_generic="false" instance_name="Button2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button2</field>
+    <statement name="DO">
+      <block type="component_method" id="vPZz/|l8@7XdAc!9n1RE">
+        <mutation component_type="ProCamera" method_name="TakePicture" is_generic="false" instance_name="ProCamera1"></mutation>
+        <field name="COMPONENT_SELECTOR">ProCamera1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="H083!-m#$lFbxFe2u{E?" x="130" y="350">
+    <mutation component_type="ProCamera" is_generic="false" instance_name="ProCamera1" event_name="SavedPhoto"></mutation>
+    <field name="COMPONENT_SELECTOR">ProCamera1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="0[!P]:pd_|2lO7M%[7Oo">
+        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Vertical_Arrangement1"></mutation>
+        <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_false" id="VmbYvhaz*YittN^Tdi7`">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="8tEb;P$h$a|nP^|YLz~!">
+            <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Image1"></mutation>
+            <field name="COMPONENT_SELECTOR">Image1</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="Fgxg!p@F4#KozT]~ISP7">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="b=mkp7f}/_KssDki99LV">
+                <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Button3"></mutation>
+                <field name="COMPONENT_SELECTOR">Button3</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_false" id="XPEXmuAD`q@2aDb[0uI;">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id=";H;(/V,ck8uo%UK6V?)X">
+                    <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Button2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Button2</field>
+                    <field name="PROP">Visible</field>
+                    <value name="VALUE">
+                      <block type="logic_false" id="cfP5C#`;v7VH9S%3akjG">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="FF8CVa820CI~=jzz.f-N">
+                        <mutation component_type="ProCamera" method_name="ResetCamera" is_generic="false" instance_name="ProCamera1"></mutation>
+                        <field name="COMPONENT_SELECTOR">ProCamera1</field>
+                        <next>
+                          <block type="component_set_get" id="FagE3h)q5IJb7FIJ7av8">
+                            <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Image1</field>
+                            <field name="PROP">Picture</field>
+                            <value name="VALUE">
+                              <block type="text_join" id="aqUX^ncKN|1vI.08UGUc">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="component_method" id="Vd05-|xF#[!60)R)CD8z">
+                                    <mutation component_type="TaifunFile" method_name="ApplicationSpecificDirectory" is_generic="false" instance_name="TaifunFile1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">TaifunFile1</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="text" id="6nD+eC3G_^Fh|@:9Iry/">
+                                    <field name="TEXT">/photo.png</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="K2pnxVvg,mFaw.g{]=y{" x="910" y="310">
+    <mutation component_type="Button" is_generic="false" instance_name="Button3" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button3</field>
+    <statement name="DO">
+      <block type="component_method" id="5pg(yhdkH4hTcoSH(D/V">
+        <mutation component_type="MakeroidCloudinary" method_name="UploadMedia" is_generic="false" instance_name="Cloudinary1"></mutation>
+        <field name="COMPONENT_SELECTOR">Cloudinary1</field>
+        <value name="ARG0">
+          <block type="text_join" id="*G)uiA~O0A6~a*,MA++@">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="component_method" id="a6v@/j:]25%LJ^Lb1*je">
+                <mutation component_type="TaifunFile" method_name="ApplicationSpecificDirectory" is_generic="false" instance_name="TaifunFile1"></mutation>
+                <field name="COMPONENT_SELECTOR">TaifunFile1</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="2vHk_GWi`q=?*8mJ#h..">
+                <field name="TEXT">/photo.png</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="urJWYz@1IMY,+UDE|vW6">
+            <mutation component_type="Notifier" method_name="ShowProgressDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="nNMj[eNt)yqM0T7,,*lT">
+                <field name="TEXT">Please wait</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="g%tAIA!K|.jB]da;[Teo">
+                <field name="TEXT">Uploading</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="~LO+mitsfwU+b_VLl7um" x="230" y="630">
+    <mutation component_type="Button" is_generic="false" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="controls_if" id="3:[^3Gt*H)hBDxENw:q0">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="component_set_get" id="0DbcbPN1*_uKv$fp0D2;">
+            <mutation component_type="Image" set_or_get="get" property_name="Visible" is_generic="false" instance_name="Image1"></mutation>
+            <field name="COMPONENT_SELECTOR">Image1</field>
+            <field name="PROP">Visible</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="j;t`q6=6)Ln@A[d22a4i">
+            <mutation component_type="ProCamera" method_name="Initialize" is_generic="false" instance_name="ProCamera1"></mutation>
+            <field name="COMPONENT_SELECTOR">ProCamera1</field>
+            <value name="ARG0">
+              <block type="component_component_block" id="$B/wS0f/|pcLq,Tp6]M{">
+                <mutation component_type="VerticalArrangement" instance_name="Vertical_Arrangement1"></mutation>
+                <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="component_set_get" id="PL?CW(zm/$F5/6Us/03h">
+                <mutation component_type="ProCamera" set_or_get="get" property_name="CameraTypeFront" is_generic="false" instance_name="ProCamera1"></mutation>
+                <field name="COMPONENT_SELECTOR">ProCamera1</field>
+                <field name="PROP">CameraTypeFront</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="E3qQToQje{]G5B+2Ipd:">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Vertical_Arrangement1"></mutation>
+                <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_false" id="cY98r4l40a+%N9~6A|lq">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="+/Z4)A`0G3+Lj/-JfmAp">
+                    <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Image1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Image1</field>
+                    <field name="PROP">Visible</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="si4?@Q`z7hFiW:,1ktCL">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id=".O]o)X)yCYbm`dk6q4SB">
+                        <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Button3"></mutation>
+                        <field name="COMPONENT_SELECTOR">Button3</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_false" id="/I5XP%P_t,dDz9Qv3^=Y">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="D#DT?Z}}GNT38`@b,#rC">
+                            <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Button2"></mutation>
+                            <field name="COMPONENT_SELECTOR">Button2</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_false" id="0h_;6Sr}c8,j[BI/;K0$">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_closeScreen" id="Qy@IZ}{i4BE?jY3!opuV"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_method" id="aC`yRr6kag+xC0RvRgw:" x="1110" y="730">
+    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+    <value name="ARG0">
+      <block type="text_join" id="GQ_r+Tu.]@?IE{B4yxwm">
+        <mutation items="2"></mutation>
+        <value name="ADD0">
+          <block type="text" id="t`A/9gs@a33nb;swfKp(">
+            <field name="TEXT">FirstStory</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="component_method" id="iFGr;^t+(n(C7vk~sM5b">
+            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+            <value name="ARG0">
+              <block type="text" id="J[(0W{crCx=*13H!ms36">
+                <field name="TEXT">UserID</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="t2v9~JQRK=qkS%8pVdp^">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="ARG1">
+      <block type="logic_false" id="~t96WUH`u7WCvro$-D(V">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+  </block>
+  <yacodeblocks ya-version="242" language-version="34"></yacodeblocks>
+</xml>

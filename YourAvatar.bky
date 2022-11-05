@@ -1,0 +1,81 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="i+q^Y:g8gH;7wZ%u/eWH" x="-650" y="-310">
+    <mutation component_type="Button" is_generic="false" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="controls_closeScreen" id="HIB4{|O_g.fx-U=uVg;+"></block>
+    </statement>
+  </block>
+  <block type="component_event" id="m~7t}^Z^D~N-x)j!_0={" x="-630" y="-210">
+    <mutation component_type="Form" is_generic="false" instance_name="YourAvatar" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">YourAvatar</field>
+    <statement name="DO">
+      <block type="component_method" id="^@Mje4R};nlH6%t;bD1e">
+        <mutation component_type="FirebaseDB" method_name="GetValue" is_generic="false" instance_name="Firebase_Database1"></mutation>
+        <field name="COMPONENT_SELECTOR">Firebase_Database1</field>
+        <value name="ARG0">
+          <block type="component_method" id="aLwx;g2(+LfLYTJBo~F3">
+            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+            <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+            <value name="ARG0">
+              <block type="text" id="[~,H[b#ame|f7gb/A=wp">
+                <field name="TEXT">Username</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="@%`UTm!wT`jzNlCd!pL%">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="u|Tzm8#_x(Ig8^Mg`5Km">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="u5.8y0PbK56!L0)UnuJ3" x="-610" y="30">
+    <mutation component_type="FirebaseDB" is_generic="false" instance_name="Firebase_Database1" event_name="GotValue"></mutation>
+    <field name="COMPONENT_SELECTOR">Firebase_Database1</field>
+    <statement name="DO">
+      <block type="component_set_get" id=":MsKUPJFnisY^fVV9nVW">
+        <mutation component_type="ImageSprite" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image_Sprite1"></mutation>
+        <field name="COMPONENT_SELECTOR">Image_Sprite1</field>
+        <field name="PROP">Picture</field>
+        <value name="VALUE">
+          <block type="lists_select_item" id="ceu)`ZaM6yPE9V]u*i,,">
+            <value name="LIST">
+              <block type="lexical_variable_get" id="~77o/$m?cT4M-BqS;~KC">
+                <mutation>
+                  <eventparam name="value"></eventparam>
+                </mutation>
+                <field name="VAR">value</field>
+              </block>
+            </value>
+            <value name="NUM">
+              <block type="text" id="ew`-g1=Q2Y+vvuN+8|/_">
+                <field name="TEXT">4</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_set_get" id="vi`|:uV[/`EvD|1d8YYh" x="0" y="0">
+    <mutation component_type="ImageSprite" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image_Sprite1"></mutation>
+    <field name="COMPONENT_SELECTOR">Image_Sprite1</field>
+    <field name="PROP">Picture</field>
+  </block>
+  <block type="helpers_assets" id="wBN`y2f2|8g[~!Ww9F*G" x="0" y="0"></block>
+  <block type="component_set_get" id="3X2w9R08wQ84H./1+l6U" x="0" y="0">
+    <mutation component_type="ImageSprite" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image_Sprite1"></mutation>
+    <field name="COMPONENT_SELECTOR">Image_Sprite1</field>
+    <field name="PROP">Picture</field>
+  </block>
+  <block type="helpers_assets" id="~*=_N#5y7O?yHoMTZuZ$" x="0" y="0"></block>
+  <yacodeblocks ya-version="242" language-version="34"></yacodeblocks>
+</xml>
