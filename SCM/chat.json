@@ -1,0 +1,247 @@
+{
+    "authURL": [
+        "creator.kodular.io"
+    ],
+    "YaVersion": "242",
+    "Source": "Form",
+    "Properties": {
+        "$Name": "Chat",
+        "$Type": "Form",
+        "$Version": "44",
+        "AppId": "6526853399445504",
+        "AppName": "Lukabook",
+        "MinSdk": "19",
+        "PrimaryColor": "&HFF868686",
+        "PrimaryColorDark": "&HFF868686",
+        "ReceiveSharedText": "video,image,",
+        "ShowListsAsJson": "True",
+        "Title": "Chat",
+        "TitleVisible": "False",
+        "Uuid": "0",
+        "$Components": [
+            {
+                "$Name": "Horizontal_Arrangement1",
+                "$Type": "HorizontalArrangement",
+                "$Version": "10",
+                "BackgroundColor": "&HFF868686",
+                "Height": "50",
+                "Width": "-2",
+                "Uuid": "157316422",
+                "$Components": [
+                    {
+                        "$Name": "Button1",
+                        "$Type": "Button",
+                        "$Version": "13",
+                        "BackgroundColor": "&H00FFFFFF",
+                        "FontSize": "23",
+                        "FontTypeface": "7",
+                        "Height": "-2",
+                        "Width": "50",
+                        "Text": "arrow_back_ios",
+                        "Uuid": "864696522"
+                    },
+                    {
+                        "$Name": "Image1",
+                        "$Type": "Image",
+                        "$Version": "6",
+                        "Clickable": "True",
+                        "Height": "50",
+                        "Width": "50",
+                        "ScalePictureToFit": "True",
+                        "Uuid": "1718695930"
+                    },
+                    {
+                        "$Name": "Horizontal_Scroll_Arrangement1",
+                        "$Type": "HorizontalScrollArrangement",
+                        "$Version": "8",
+                        "BackgroundColor": "&H00FFFFFF",
+                        "Clickable": "True",
+                        "Height": "-2",
+                        "Width": "-2",
+                        "Uuid": "-561425992",
+                        "$Components": [
+                            {
+                                "$Name": "Vertical_Arrangement2",
+                                "$Type": "VerticalArrangement",
+                                "$Version": "10",
+                                "BackgroundColor": "&H00FFFFFF",
+                                "Clickable": "True",
+                                "Height": "-2",
+                                "Width": "-2",
+                                "Uuid": "-534479212",
+                                "$Components": [
+                                    {
+                                        "$Name": "Label1",
+                                        "$Type": "Label",
+                                        "$Version": "10",
+                                        "Clickable": "True",
+                                        "FontSize": "23",
+                                        "Height": "-2",
+                                        "Width": "-2",
+                                        "Text": "Loading...",
+                                        "TextColor": "&HFFFFFFFF",
+                                        "Uuid": "-1396776440"
+                                    },
+                                    {
+                                        "$Name": "Label3",
+                                        "$Type": "Label",
+                                        "$Version": "10",
+                                        "Text": "Status",
+                                        "TextColor": "&HFFFFFFFF",
+                                        "Uuid": "-2071362706"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$Name": "Button3",
+                        "$Type": "Button",
+                        "$Version": "13",
+                        "Height": "50",
+                        "Width": "50",
+                        "Image": "appicon.png",
+                        "Uuid": "1101290485"
+                    }
+                ]
+            },
+            {
+                "$Name": "Chat_View1",
+                "$Type": "KodularChatView",
+                "$Version": "3",
+                "Clickable": "True",
+                "DoubleTap": "True",
+                "Height": "-2",
+                "Width": "-2",
+                "Swipeable": "True",
+                "Uuid": "500534498"
+            },
+            {
+                "$Name": "Horizontal_Arrangement2",
+                "$Type": "HorizontalArrangement",
+                "$Version": "10",
+                "Width": "-2",
+                "Uuid": "1585095515",
+                "$Components": [
+                    {
+                        "$Name": "Text_Box1",
+                        "$Type": "TextBox",
+                        "$Version": "13",
+                        "Width": "-2",
+                        "Hint": "Aa",
+                        "Uuid": "-902082142"
+                    },
+                    {
+                        "$Name": "Button2",
+                        "$Type": "Button",
+                        "$Version": "13",
+                        "BackgroundColor": "&HFF000000",
+                        "FontSize": "23",
+                        "FontTypeface": "7",
+                        "Text": "thumb_up",
+                        "Uuid": "-661614923"
+                    }
+                ]
+            },
+            {
+                "$Name": "Vertical_Arrangement1",
+                "$Type": "VerticalArrangement",
+                "$Version": "10",
+                "Width": "-2",
+                "Uuid": "1875829339",
+                "Visible": "False",
+                "$Components": [
+                    {
+                        "$Name": "Label2",
+                        "$Type": "Label",
+                        "$Version": "10",
+                        "FontSize": "23",
+                        "Width": "-2",
+                        "Text": "Reactions",
+                        "TextAlignment": "1",
+                        "Uuid": "707676892"
+                    },
+                    {
+                        "$Name": "List_View_Image_and_Text1",
+                        "$Type": "MakeroidListViewImageText",
+                        "$Version": "4",
+                        "Height": "-2",
+                        "Width": "-2",
+                        "Uuid": "-1071829244"
+                    }
+                ]
+            },
+            {
+                "$Name": "Notifier1",
+                "$Type": "Notifier",
+                "$Version": "11",
+                "Uuid": "-1752112608"
+            },
+            {
+                "$Name": "Firebase_Database2",
+                "$Type": "FirebaseDB",
+                "$Version": "4",
+                "FirebaseToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkIjp7InVpZCI6IjE2ZmU4YmY5LWJiMjgtNDUxNi1hNmQxLWRiNTg3ZTFlODdlMiIsInByb2plY3QiOiJMdWthYm9vayIsImRldmVsb3BlciI6Imx1a2FwcmF2aXZsb2dvdmlAZ21haWw6Y29tIn0sInYiOjAsImV4cCI6MTY3NDgzMzQ0ODMsImlhdCI6MTYzMjU2ODA4M30.QmtY5Luc2R9lXmCQnm8ju0iSIHuyY8RTXtmpA99p1Xk",
+                "FirebaseURL": "https:\/\/instantgram-414e1-default-rtdb.firebaseio.com\/",
+                "ProjectBucket": "ChatAppInstantgramNotCrashing",
+                "Uuid": "1493073012"
+            },
+            {
+                "$Name": "Tiny_DB1",
+                "$Type": "TinyDB",
+                "$Version": "2",
+                "Uuid": "1432161065"
+            },
+            {
+                "$Name": "Clock1",
+                "$Type": "Clock",
+                "$Version": "4",
+                "Uuid": "2114094861"
+            },
+            {
+                "$Name": "Firebase_Database3",
+                "$Type": "FirebaseDB",
+                "$Version": "4",
+                "FirebaseToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkIjp7InVpZCI6IjU4MDdmNzZkLTY0ZjktNDllZC05MmNhLWM0NmVlNTE4NjFjNiIsInByb2plY3QiOiJMdWthYm9vayIsImRldmVsb3BlciI6Imx1a2FwcmF2aXZsb2dvdmlAZ21haWw6Y29tIn0sInYiOjAsImV4cCI6MTY3NDgzMzY5NDgsImlhdCI6MTYzMjU3MDU0OH0.vZw6hKbYm9CgZYl9PxhuPImir0vKqiXsSESlgHsJksw",
+                "FirebaseURL": "https:\/\/instantgram-414e1-default-rtdb.firebaseio.com\/",
+                "ProjectBucket": "Lukabook",
+                "Uuid": "-437704837"
+            },
+            {
+                "$Name": "Bottom_Sheet1",
+                "$Type": "MakeroidBottomSheet",
+                "$Version": "2",
+                "Uuid": "-1823203221"
+            },
+            {
+                "$Name": "Firebase_Database4",
+                "$Type": "FirebaseDB",
+                "$Version": "4",
+                "FirebaseToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkIjp7InVpZCI6ImI2MjhmYWEyLTdhMmUtNGYzMC1hZjFhLTVlNzdkNzczYTA2NiIsInByb2plY3QiOiJMdWthYm9vayIsImRldmVsb3BlciI6Imx1a2FwcmF2aXZsb2dvdmlAZ21haWw6Y29tIn0sInYiOjAsImV4cCI6MTY3NDgzNDM0MDQsImlhdCI6MTYzMjU3NzAwNH0.73MnX5QXrMTsq3RLJKQ6C_D49l3vZEL47NhrtRN1X0U",
+                "FirebaseURL": "https:\/\/instantgram-414e1-default-rtdb.firebaseio.com\/",
+                "ProjectBucket": "Lukabook",
+                "Uuid": "216455922"
+            },
+            {
+                "$Name": "Clock2",
+                "$Type": "Clock",
+                "$Version": "4",
+                "TimerEnabled": "False",
+                "TimerInterval": "3000",
+                "Uuid": "-1453405773"
+            },
+            {
+                "$Name": "Activity_Starter1",
+                "$Type": "ActivityStarter",
+                "$Version": "6",
+                "Uuid": "1931338956"
+            },
+            {
+                "$Name": "Activity_Starter2",
+                "$Type": "ActivityStarter",
+                "$Version": "6",
+                "Uuid": "1089533282"
+            }
+        ]
+    }
+}
